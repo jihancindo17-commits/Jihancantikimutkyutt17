@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kisah Anak & Orang Tua</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+
+/* DASHBOARD */
+.page {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+/* DASHBOARD 1 */
+#page1 {
+    flex-direction: column;
+    color: white;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.creator {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #ff6b81;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff6b81;
+    color: white;
+}
+
+/* DASHBOARD 2 */
+#page2 {
+    background: white;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.story-box {
+    max-width: 700px;
+    background: #ffe6ea;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.story-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff4d6d;
+}
+
+.story-text {
+    text-align: justify;
+    line-height: 1.7;
+    color: #444;
+}
+</style>
+
+</head>
+<body>
+
+<!-- DASHBOARD 1 -->
+<div id="page1" class="page active">
+    <div class="title">🌸 Kisah Rindu Seorang Anak 🌸</div>
+    <div class="creator">Dibuat oleh: Jihan Cantik 💖</div>
+    <button class="btn" onclick="nextPage()">Baca Cerita</button>
+</div>
+
+<!-- DASHBOARD 2 -->
+<div id="page2" class="page">
+    <div class="story-box">
+        <div class="story-title">Rindu di Balik Jarak</div>
+        <div class="story-text">
+            Seorang anak bernama Aira harus menjalani hidup yang berbeda dari anak-anak lainnya. 
+            Sejak kecil, ia sudah terbiasa hidup jauh dari kedua orang tuanya yang bekerja di kota besar. 
+            Ia tinggal bersama neneknya di desa yang sederhana, penuh kenangan namun juga penuh kerinduan.
+
+            <br><br>
+            Setiap pagi, Aira melihat teman-temannya diantar oleh orang tua mereka ke sekolah. 
+            Sementara ia hanya melambaikan tangan kepada neneknya yang berdiri di depan rumah. 
+            Senyumnya terlihat kuat, tapi di dalam hatinya tersimpan rasa sepi yang tak bisa ia ungkapkan.
+
+            <br><br>
+            Malam hari adalah waktu yang paling berat. Saat suasana sunyi, Aira sering menatap langit 
+            dan membayangkan bahwa orang tuanya sedang melihat bulan yang sama. Ia menulis banyak surat, 
+            meskipun tidak semua terkirim. Baginya, itu adalah cara untuk tetap merasa dekat.
+
+            <br><br>
+            Hari demi hari berlalu. Aira tumbuh menjadi anak yang mandiri dan kuat. 
+            Ia belajar bahwa jarak bukan berarti kehilangan cinta. Orang tuanya mungkin jauh, 
+            tapi kasih sayang mereka tetap terasa dalam setiap doa dan usaha yang mereka lakukan.
+
+            <br><br>
+            Hingga suatu hari, saat hari ulang tahunnya, orang tuanya datang tanpa pemberitahuan. 
+            Air mata Aira pun jatuh, bukan karena sedih, tapi karena bahagia yang selama ini ia pendam akhirnya terobati.
+
+            <br><br>
+            Kisah Aira mengajarkan bahwa rindu adalah bukti cinta. 
+            Dan meskipun jarak memisahkan, hati akan selalu menemukan jalan untuk tetap bersama.
+        </div>
+
+        <button class="btn" onclick="backPage()">Kembali</button>
+    </div>
+</div>
+
+<script>
+function nextPage() {
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+
+function backPage() {
+    document.getElementById("page2").classList.remove("active");
+    document.getElementById("page1").classList.add("active");
+}
+</script>
+
+</body>
+</html>
